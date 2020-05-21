@@ -13,9 +13,11 @@
 
       <div>
         <% @lists.each do |list| %>
-          <p><%= list.status %> <%= list.category %> List <span style="text-decoration: underline"><%= link_to 'Show', list %></span></p>
+          <p><%= list.status %> List <span style="text-decoration: underline"><%= link_to 'Show', list %></span></p>
         <% end %>
       </div>
+
+      <!-- <#%= link_to 'New List', new_list_path %>  -->
 
       <div>
         <p>Website by Cindy Mendes</p>

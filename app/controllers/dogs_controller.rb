@@ -70,7 +70,7 @@ class DogsController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def dog_params
-      params.require(:dog).permit(:image, :breed, :color, :size, :location, :date, :description, :list_id)
+      params.require(:dog).permit(:image, :breed, :color, :size, :location, :date, :description, :list_id, :remove_image)
     end
 
     def catch_not_found(e)
@@ -78,5 +78,5 @@ class DogsController < ApplicationController
       flash.alert = e.to_s
       redirect_to dogs_path
     end
-    
+
 end
