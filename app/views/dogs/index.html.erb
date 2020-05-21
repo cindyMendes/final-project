@@ -6,7 +6,7 @@
     <p id="notice"><%= notice %></p>
 
     <div>
-      <h1>List of all the dogs</h1>
+      <h1>List of All the Dogs Missing</h1>
     </div>
 
     <span><%= link_to 'Add New Dog', new_dog_path %></span>
@@ -18,12 +18,11 @@
          <% end %>
          <p>Dog ID: <%= dog.id %></p>
          <p>Status: <%= dog.list.status %></p>
-         <p>Category: <%= dog.list.category %></p>
          <p> Breed: <%= dog.breed %></p>
          <p> Color: <%= dog.color %></p>
          <p> Size: <%= dog.size %></p>
          <p> Location: <%= dog.location %></p>
-         <p> Date: <%= dog.date %></p>
+         <p> Date: <%= dog.date.strftime("%m/%d/%Y") %></p>
          <p> Description: <%= dog.description %></p>
 
          <span><%= link_to 'Show', dog %></span>

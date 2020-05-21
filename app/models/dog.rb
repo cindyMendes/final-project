@@ -8,7 +8,7 @@ class Dog < ApplicationRecord
   validates :size,  presence: true
   validates :location, presence: true
   validates :date, presence: true
-  validates_format_of :date, :with => /(0[1-9]|1[012])[- \/.](0[1-9]|[12][0-9]|3[01])[- \/.](19|20)\d\d/i, :message => "must be in the following format: mm/dd/yyyy"
+  # validates_format_of :date, :with => /(0[1-9]|1[012])[- \/.](0[1-9]|[12][0-9]|3[01])[- \/.](19|20)\d\d/i, :message => "must be in the following format: mm/dd/yyyy"
   validates :description, presence: true
 
   mount_uploader :image, ImageUploader

@@ -10,12 +10,11 @@
       <% end %>
       <p><span>Dog ID:</span> <%= @dog.id %></p>
       <p><span>Status:</span> <%= @dog.list.status %></p>
-      <p><span>Category:</span> <%= @dog.list.category %></p>
       <p><span>Breed:</span> <%= @dog.breed %></p>
       <p><span>Color:</span> <%= @dog.color %></p>
       <p><span>Size:</span> <%= @dog.size %></p>
       <p><span>Location:</span> <%= @dog.location %></p>
-      <p><span>Date:</span> <%= @dog.date%></p>
+      <p><span>Date:</span> <%= @dog.date.strftime("%m/%d/%Y") %></p>
       <p><span>Description:</span> <%= @dog.description %></p>
     </div>
 

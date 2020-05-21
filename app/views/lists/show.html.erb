@@ -8,14 +8,14 @@
     <h1><%= @list.status %> List</h1>
 
     <p> Status: <%= @list.status %></p>
-  
+
 
 
     <% @list.dog.each do |list| %>
 
 
       <% if list.image? %>
-        <p>Image: <%= image_tag list.image.thumb.url %></p>
+        <p>Image: <%= image_tag list.image.small.url %></p>
       <% end %>
 
       <p> Dog ID: <%= list.id %></p>
@@ -23,7 +23,7 @@
       <p> Color: <%= list.color %></p>
       <p> Size: <%= list.size %></p>
       <p> Location: <%= list.location %></p>
-      <p> Date: <%= list.date %></p>
+      <p> Date: <%= list.date.strftime("%m/%d/%Y") %></p>
       <p> Description: <%= list.description %></p>
 
       <%= link_to 'Show Dog', list %> |
